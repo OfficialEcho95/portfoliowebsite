@@ -1,0 +1,92 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --accent: #0055ff;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+body.dark {
+  --bg: #111111;
+  --text: #f0f0f0;
+  --accent: #66aaff;
+  --shadow: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  background: var(--accent);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: var(--shadow);
+  border-radius: 10px;
+}
+
+.project h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills-grid span {
+  background: var(--accent);
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
