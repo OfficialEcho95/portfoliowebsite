@@ -4,60 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emmanuel Chukwu | Backend Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0ff817b.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="theme-toggle" onclick="toggleTheme()">🌓</div>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <i class="fas fa-moon"></i>
+  </div>
 
   <header>
-    <div class="container">
+    <div class="container" data-aos="fade-down">
       <h1>Emmanuel Chukwu</h1>
-      <p class="tagline">Building resilient backends, one endpoint at a time.</p>
+      <p class="tagline">Crafting resilient backends, one endpoint at a time.</p>
     </div>
   </header>
 
-  <section id="projects" class="container">
-    <h2>🚀 Projects</h2>
-    <div class="project">
-      <h3>Trello Clone</h3>
-      <p>Task management board with lists, cards, labels, and reminder notifications using Node.js, MongoDB, and Redis (BullMQ).</p>
-      <a href="https://github.com/OfficialEcho95/DEVTASKER-JS" target="_blank">View on GitHub</a>
-    </div>
-    <div class="project">
-      <h3>Auth API</h3>
-      <p>Robust authentication system with JWT, refresh tokens, and role-based access control.</p>
-      <a href="https://github.com/OfficialEcho95/freshfarmproduce" target="_blank">View on GitHub</a>
-    </div>
-    <!-- Add more projects -->
-  </section>
+  <main class="container">
+    <section id="projects" data-aos="fade-up">
+      <h2>🚀 Projects</h2>
+      <div id="projects-container" class="projects-grid"></div>
+    </section>
 
-  <section id="skills" class="container">
-    <h2>🛠️ Skills</h2>
-    <div class="skills-grid">
-      <span>Node.js</span>
-      <span>Express.js</span>
-      <span>MongoDB</span>
-      <span>Redis</span>
-      <span>BullMQ</span>
-      <span>REST APIs</span>
-      <span>PostgreSQL</span>
-      <span>WebSockets</span>
-      <span>Docker</span>
-      <span>Git</span>
-    </div>
-  </section>
+    <section id="skills" data-aos="fade-up">
+      <h2>🛠️ Skills</h2>
+      <div class="skills-grid">
+        <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Redis</span>
+        <span>BullMQ</span><span>REST APIs</span><span>PostgreSQL</span><span>Docker</span>
+        <span>WebSockets</span><span>Git</span>
+      </div>
+    </section>
 
-  <section id="contact" class="container">
-    <h2>📬 Contact</h2>
-    <p>Email: <a href="mailto:officialecho95@outlook.com">officialecho95@outlook.comm</a></p>
-    <p>GitHub: <a href="https://github.com/OfficialEcho95" target="_blank">OfficialEcho</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/emmanuel-chukwu-87996b101/" target="_blank">Emmanuel Chukwu</a></p>
-  </section>
+    <section id="blog" data-aos="fade-up">
+      <h2>📝 Blog</h2>
+      <div id="blog-entries">
+        <p>Coming soon: Technical articles, backend tips & architecture deep-dives.</p>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>📬 Contact</h2>
+      <ul class="contact-list">
+        <li><i class="fas fa-envelope"></i> <a href="mailto:officialecho95@outlook.com">officialecho95@outlook.com</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/OfficialEcho95" target="_blank">GitHub</a></li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/emmanuel-chukwu-87996b101" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Emmanuel Chukwu. Built with 💻 + ☕.</p>
+    <p>&copy; 2025 Emmanuel Chukwu • Built with 💻 + ☕</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
