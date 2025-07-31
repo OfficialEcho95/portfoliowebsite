@@ -1,66 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emmanuel Chukwu | Backend Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0ff817b.js" crossorigin="anonymous"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="theme-toggle" onclick="toggleTheme()">
-    <i class="fas fa-moon"></i>
-  </div>
-
-  <header>
-    <div class="container" data-aos="fade-down">
-      <h1>Emmanuel Chukwu</h1>
-      <p class="tagline">Crafting resilient backends, one endpoint at a time.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmanuel Chukwu | Backend Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2e0ff817b.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        transition: background 0.3s, color 0.3s;
+      }
+      .dark-mode {
+        background-color: #0f172a;
+        color: #f1f5f9;
+      }
+      .theme-toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        z-index: 50;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <div class="theme-toggle text-2xl" onclick="toggleTheme()">
+      <i class="fas fa-moon"></i>
     </div>
-  </header>
 
-  <main class="container">
-    <section id="projects" data-aos="fade-up">
-      <h2>🚀 Projects</h2>
-      <div id="projects-container" class="projects-grid"></div>
-    </section>
+    <header class="text-center py-16 bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-800 text-white shadow-lg">
+      <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-down">Emmanuel Chukwu</h1>
+      <p class="text-xl" data-aos="fade-up">Crafting resilient backends, one endpoint at a time.</p>
+    </header>
 
-    <section id="skills" data-aos="fade-up">
-      <h2>🛠️ Skills</h2>
-      <div class="skills-grid">
-        <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Redis</span>
-        <span>BullMQ</span><span>REST APIs</span><span>PostgreSQL</span><span>Docker</span>
-        <span>WebSockets</span><span>Git</span>
-      </div>
-    </section>
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-24">
+      <section id="projects" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6 flex items-center gap-2"><span>🚀</span>Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+          <!-- Projects dynamically injected here -->
+        </div>
+      </section>
 
-    <section id="blog" data-aos="fade-up">
-      <h2>📝 Blog</h2>
-      <div id="blog-entries">
-        <p>Coming soon: Technical articles, backend tips & architecture deep-dives.</p>
-      </div>
-    </section>
+      <section id="skills" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6 flex items-center gap-2"><span>🛠️</span>Skills</h2>
+        <div class="flex flex-wrap gap-4 text-sm font-semibold">
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Node.js</span>
+          <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full">Express</span>
+          <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">MongoDB</span>
+          <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full">Redis</span>
+          <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full">BullMQ</span>
+          <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full">REST APIs</span>
+          <span class="px-3 py-1 bg-blue-200 text-blue-900 rounded-full">PostgreSQL</span>
+          <span class="px-3 py-1 bg-gray-200 text-gray-900 rounded-full">Docker</span>
+          <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full">WebSockets</span>
+          <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">Git</span>
+        </div>
+      </section>
 
-    <section id="contact" data-aos="fade-up">
-      <h2>📬 Contact</h2>
-      <ul class="contact-list">
-        <li><i class="fas fa-envelope"></i> <a href="mailto:officialecho95@outlook.com">officialecho95@outlook.com</a></li>
-        <li><i class="fab fa-github"></i> <a href="https://github.com/OfficialEcho95" target="_blank">GitHub</a></li>
-        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/emmanuel-chukwu-87996b101" target="_blank">LinkedIn</a></li>
-      </ul>
-    </section>
-  </main>
+      <section id="blog" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6 flex items-center gap-2"><span>📝</span>Blog</h2>
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl text-gray-600 dark:text-gray-300">
+          <p>Coming soon: Technical articles, backend tips & architecture deep-dives.</p>
+        </div>
+      </section>
 
-  <footer>
-    <p>&copy; 2025 Emmanuel Chukwu • Built with 💻 + ☕</p>
-  </footer>
+      <section id="contact" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6 flex items-center gap-2"><span>📬</span>Contact</h2>
+        <ul class="space-y-4 text-lg">
+          <li><i class="fas fa-envelope"></i> <a href="mailto:officialecho95@outlook.com" class="hover:underline ml-2">officialecho95@outlook.com</a></li>
+          <li><i class="fab fa-github"></i> <a href="https://github.com/OfficialEcho95" target="_blank" class="hover:underline ml-2">GitHub</a></li>
+          <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/emmanuel-chukwu-87996b101" target="_blank" class="hover:underline ml-2">LinkedIn</a></li>
+        </ul>
+      </section>
+    </main>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="script.js"></script>
-</body>
+    <footer class="bg-gray-900 text-white text-center py-6 mt-12">
+      <p>&copy; 2025 Emmanuel Chukwu • Built with 💻 + ☕</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+      }
+    </script>
+  </body>
 </html>
